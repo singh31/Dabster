@@ -1,0 +1,40 @@
+<div class="container">
+<h1>ALL POSTS</h1>
+{{>home/form-msgs}}
+<table class= "table table-bordered">
+
+
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Picture</th>
+            <th>title</th>
+            <th>Category</th>
+            <th>price</th>
+            <th>description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each objects}}
+            <tr>
+                
+                <td>{{id}}</td>
+                <td><img height="50px" src="/uploads/{{picture}}"></td>
+                <td>{{title}}</td>
+                <td>{{category}}</td>
+                <td>{{price}}</td>
+                <td>{{description}}</td>
+                <td><a href="/admin/posts/edit/{{id}}" class="btn btn-info">Edit</a></td>
+                <td>
+                <form action="/admin/posts/{{id}}?_method=DELETE" method="post" >
+                    <button type="submit" class="btn btn-danger" >DELETE</button>
+                </form></td>
+
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div> 

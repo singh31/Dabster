@@ -1,0 +1,26 @@
+{
+  "name": "ecomm",
+  "version": "1.0.0",
+  "description": "e-commerce website for dabster",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "method-override": "^3.0.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.10",
+    "nodemon": "^1.18.9",
+    "passport": "^0.4.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arjun",
+  "license": "ISC"
+}

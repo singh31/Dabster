@@ -1,0 +1,104 @@
+<br> <br> <br>
+
+<div class = "container">
+<h1>Create Posts</h1>
+<form action="/admin/objects/create" method = "POST" enctype="multipart/form-data">
+
+<div class=" form-group">
+    <label for="title">Title</label>
+    <input name="title" type = "text" class = "form-control" id="title" placeholder="Enter Title"> 
+</div>
+
+<div class=" form-group">
+    <label for="picture">File Upload</label>
+    <input name="picture" type = "file" class = "form-control" > 
+</div>
+
+<div class="form-group">
+    <label for="category">Category</label>
+       <div class="dropdown">
+           
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        Categories
+                            </button>
+                            <select>
+                            <ul class="dropdown-menu">
+                                {{#each pcategories}}
+                                  <li> <option value="{{primary}}">  {{primary}}
+                                    <ul class="dropdown-submenu">
+                                        <select name="scategory">
+                                        {{#each secondary}}
+                                         <li> <option value="{{secondary}}">   {{secondary}} </option> </li>
+                                        {{/each}}
+                                        </select>
+                                    </ul>
+                                    </option>
+                                    </li>
+                                {{/each}}
+                            </ul> 
+                            </select>
+                            
+                    
+           
+       </div>
+
+            {{!-- <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">HTML</a></li>
+                    <li><a tabindex="-1" href="#">CSS</a></li>
+                    <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                        <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="test" href="#">Another dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="#">3rd level dropdown</a></li>
+                            <li><a href="#">3rd level dropdown</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </li>
+                    </ul>
+            </div> --}}
+
+
+
+                {{!-- <select name="pcategory">
+                    {{#each pcategory}}
+                    <option value="{{primary}}">
+                        {{primary}}
+                        <select name="scategory" >
+                            {{#each secondary}}
+                            
+                                <option value="{{secondary}}">{{secondary}}</option>
+                            {{/each}}
+                        </select>
+                        
+                        </option>
+                    {{/each}}
+                </select> --}}
+       
+</div>
+
+<div class=" form-group">
+    <label for="price">Price</label>
+    <input name="price" type = "price" class = "form-control" > 
+</div>
+
+<div class=" form-group">
+    <label for="description">Description</label>
+    <textarea name="description" cols="30" rows="10" class = "form-control" id="description" placeholder="Enter Description"></textarea> 
+</div>
+
+<button type="submit" class="btn btn-dark"  >Create Object</button>
+
+</form>
+
+</div>
+
+
+<br> <br> <br>

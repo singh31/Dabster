@@ -1,0 +1,69 @@
+
+<!-- mens -->
+<div class="men-wear">
+	<div class="container">
+		
+		<div class="col-md-8 products-right">
+		
+        	{{#if title}}
+             <h5>{{title}} </h5> 
+            {{else}}
+            <h5>New Arrivals</h5>
+                {{/if}}
+			
+			<div class="men-wear-bottom">
+				<div class="col-sm-4 men-wear-left">
+					<img class="img-responsive" src="images/men3.jpg" alt=" " />
+				</div>
+				<div class="col-sm-8 men-wear-right">
+					<h4>Exclusive Men's Collections</h4>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+					accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
+					ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+					explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+					odit aut fugit. </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+				
+				
+			<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="single-pro">
+		{{#each objects}}
+						<div class="col-md-3 product-men">
+								
+                                <div class="men-pro-item simpleCart_shelfItem">
+									<div class="men-thumb-item">
+										<img src= "/uploads/{{picture}}" alt="" class="pro-image-front">
+										<img src="/uploads/{{picture}}" alt="" class="pro-image-back">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">Quick View</a>
+												</div>
+											</div>
+											<span class="product-new-top">New</span>
+											
+									</div>
+									<div class="item-info-product ">
+										<h4><a href="single.html">{{title}} </a></h4>
+										<div class="info-product-price">
+											<span class="item_price">Rs. {{price}}</span>
+										</div>
+										<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+									</div>
+								</div>
+                              
+                        </div>
+          {{/each	}}    
+			
+	</div>
+</div>	
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
